@@ -1,0 +1,155 @@
+/* =============================================================================
+
+    // APP CSS
+    // Property of the Swig
+    // Authored by Josh Beveridge
+
+============================================================================= */
+
+/* Body Font Size =========================================================== */
+html, body {font-size: 5vw;}
+@media screen and (min-width:541px) {html, body {font-size: 3vw;}}
+@media screen and (min-width:641px) {html, body {font-size: 2.5vw;}}
+@media screen and (min-width:801px) {html, body {font-size: 2vw;}}
+@media screen and (min-width:1025px) {html, body {font-size: 1.5vw;}}
+@media screen and (min-width:1281px) {html, body {font-size: 1.3vw;}}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.5;
+}
+
+/* Imports ================================================================== */
+
+/*Palette*/
+@import 'spec/palette.css';
+
+/*Typography*/
+@import 'spec/typography.css';
+
+/* Body ===================================================================== */
+body {
+    background: $white;
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100vw;
+
+    &.active {
+        overflow: hidden;
+    }
+
+}
+
+/* Navigation =============================================================== */
+@import 'layout/navigation.css';
+
+/* Progress ================================================================= */
+.progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 50;
+
+    @media $respond-landscape {
+        height: 90vh;
+        top: 5vh;
+        right: 5rem;
+        width: .5rem;
+    }
+
+    .value {
+        background: $yellow;
+        display: block;
+        height: .5rem;
+        transition: width .1s ease;
+        width: 0;
+
+        @media $respond-landscape {
+            height: 0;
+            transition: height .1s ease;
+            width: .5rem;
+        }
+
+    }
+
+}
+
+/* Article ================================================================== */
+.page {
+    margin: 0 0 11vh 0;
+    max-width: 100%;
+    padding: $mobile-padding;
+    position: relative;
+    width: 100vw;
+
+    @media $respond-landscape {
+        max-width: 89%;
+        margin: 0;
+        position: relative;
+        left: 11vw;
+        width: 89vw;
+    }
+
+    article {
+        display: block;
+        margin: 0 auto;
+        max-width: 35rem;
+        position: relative;
+        z-index: 10;
+    }
+
+}
+
+.heading-page {
+    color: $light-grey;
+    font-size: 7.5rem;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: -1rem;
+
+    @media $respond-landscape {
+        font-size: 15rem;
+        line-height: 1;
+        left: 7rem;
+    }
+
+}
+
+/* Social =================================================================== */
+.social {
+    display: block;
+    margin: 0 auto;
+    max-width: 35rem;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+
+    dd {
+        display: block;
+        margin: 1rem 0;
+
+        @media $respond-portrait {
+            display: inline-block;
+            margin: 0 2rem 1rem 0;
+        }
+
+        &:last-of-type {
+
+            @media $respond-portrait {
+                margin: 0 0 1rem 0;
+            }
+
+        }
+
+        i {
+            color: $black;
+            margin: 0 .5rem 0 0;
+        }
+
+    }
+
+}

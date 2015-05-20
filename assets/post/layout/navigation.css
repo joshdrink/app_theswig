@@ -1,0 +1,210 @@
+/* =============================================================================
+
+    // NAVIGATION CSS
+    // Property of the Swig
+    // Authored by Josh Beveridge
+
+============================================================================= */
+
+/* Navigation =============================================================== */
+nav {
+    height: 11vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 100;
+
+    @media $respond-landscape {
+        height: 100vh;
+        width: 11vw;
+    }
+
+}
+
+/* Common Pane Styles ======================================================= */
+[class*='pane'] {
+    background: red;
+    display: block;
+    height: 100vh;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .3s ease;
+    width: 100vw;
+
+    @media $respond-landscape {
+        height: 100vh;
+        max-width: none;
+    }
+
+}
+
+/* Pane 01 ================================================================== */
+.pane-01 {
+    background: rgb(242,169,0);
+    background: -moz-linear-gradient(top,  rgba(242,169,0,1) 0%, rgba(233,136,0,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,169,0,1)), color-stop(100%,rgba(233,136,0,1)));
+    background: -webkit-linear-gradient(top,  rgba(242,169,0,1) 0%,rgba(233,136,0,1) 100%);
+    background: -o-linear-gradient(top,  rgba(242,169,0,1) 0%,rgba(233,136,0,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(242,169,0,1) 0%,rgba(233,136,0,1) 100%);
+    background: linear-gradient(to bottom,  rgba(242,169,0,1) 0%,rgba(233,136,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a900', endColorstr='#e98800',GradientType=0 );
+    transform: translate(0, 0);
+    transition: transform .5s cubic-bezier(0.28, 0.18, 0, 1) .2s;
+
+    @media $respond-landscape {
+        transform: translate(-89vw, 0);
+        transition: transform .6s cubic-bezier(0.28, 0.18, 0, 1);
+    }
+
+    &.active {
+        transform: translate(0, -89vh);
+        transition: transform .5s cubic-bezier(0.28, 0.18, 0, 1);
+
+        @media $respond-landscape {
+            transform: translate(0, 0);
+        }
+
+    }
+
+}
+
+/* Pane 02 ================================================================== */
+.pane-02 {
+    background: #282828;
+    opacity: .5;
+    transform: translate(0, 10vh);
+
+    @media $respond-landscape {
+        transform: translate(-99vw, 0);
+    }
+
+    &.active {
+        transform: translate(0, 0vh);
+
+        @media $respond-landscape {
+            transform: translate(-89vw, 0);
+        }
+
+    }
+
+}
+
+/* Pane 03 ================================================================== */
+.pane-03 {
+    background: #282828;
+    opacity: .5;
+    transform: translate(0, 11vh);
+
+    @media $respond-landscape {
+        transform: translate(-100vw, 0);
+    }
+
+    &.active {
+        transform: translate(0, 10vh);
+        transition: transform .3s ease .2s;
+
+        @media $respond-landscape {
+            transform: translate(-99vw, 0);
+        }
+
+    }
+
+}
+
+/* Menu ===================================================================== */
+.menu {
+    padding: 1rem $mobile-padding;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    @media $respond-landscape {
+        padding: 1rem 0 0 0;
+        top: 0;
+        left: 50%;
+        transform: translate(-40%, 0);
+    }
+
+    dd {
+        display: inline-block;
+        margin: 0 1rem 0 0;
+
+        @media $respond-landscape {
+            display: block;
+            margin: 1rem 0;
+        }
+
+        a {
+            color: $black;
+            font-family: $font-roboto;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &.active {
+                color: $white;
+            }
+
+            &:hover {
+
+                @media $respond-landscape {
+                    color: $white;
+                }
+
+            }
+
+            span {
+                color: $white;
+            }
+
+        }
+
+    }
+
+}
+
+/* Menu Content ============================================================= */
+.menu-content {
+    height: 89vh;
+    opacity: 0;
+    overflow: auto;
+    padding: $mobile-padding;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 11vh);
+    transition: transform 0s ease .2s, opacity .2s ease;
+
+    @media $respond-landscape {
+        height: auto;
+        transform: translate(-89vw, 0);
+        width: 50vw;
+    }
+
+    &.active {
+        opacity: 1;
+        transform: translate(0, -89vh);
+        transition: transform .3s ease .3s, opacity .5s ease .5s;
+
+        @media $respond-landscape {
+            transform: translate(30vw, 0);
+            transition: transform .5s ease .3s, opacity .7s ease .6s;
+        }
+
+    }
+
+}
+
+.heading-menu {
+    font-size: 5rem;
+    line-height: 1;
+
+    span {
+        color: $white;
+        line-height: 1;
+    }
+
+}

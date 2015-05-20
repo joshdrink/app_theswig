@@ -1,0 +1,174 @@
+/* =============================================================================
+
+    // TYPOGRAPHY CSS
+    // Property of the Swig
+    // Authored by Josh Beveridge
+
+============================================================================= */
+
+/* Media Queries ============================================================ */
+$respond-portrait: screen and (min-width: 701px);
+$respond-landscape: screen and (min-width: 801px);
+
+/* Google Fonts ============================================================= */
+
+    $font-roboto: 'Roboto Condensed', sans-serif;
+    $font-droid: 'Droid Serif', serif;
+
+/* Typekit Fonts ============================================================ */
+
+/* Custom Fonts ============================================================= */
+
+/* Padding Variables ======================================================== */
+
+    $mobile-padding: 2rem;
+
+
+/* Selection ================================================================ */
+::selection {
+    background: $yellow;
+    color: $white;
+}
+
+/* Headings ================================================================= */
+h1 {font-size: 2rem;}
+h2 {font-size: 1.8rem;}
+h3 {font-size: 1.6rem;}
+h4 {font-size: 1.4rem;}
+h5 {font-size: 1.2rem;}
+h6 {font-size: 1rem;}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $black;
+    font-family: $font-roboto;
+    font-weight: 700;
+    margin: 1rem 0;
+
+    @media $respond-landscape {
+        margin: 2rem 0;
+    }
+
+    &:first-child {
+        margin: 0 0 1rem 0;
+
+        @media $respond-landscape {
+            margin: 0 0 2rem 0;
+        }
+
+    }
+
+}
+
+/* Copy ===================================================================== */
+
+/* Body Font */
+p,
+a,
+strong,
+em,
+span,
+blockquote {
+    color: $black;
+    font-family: $font-droid;
+}
+
+p {
+    margin: 1rem 0;
+
+    @media $respond-landscape {
+        margin: 2rem 0;
+    }
+
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $yellow;
+    margin: 1rem 0;
+
+    @media $respond-landscape {
+        margin: 2rem 0;
+    }
+
+}
+
+blockquote {
+    border-left: .5rem solid $orange;
+    margin: 1rem 0;
+    padding: 0 $mobile-padding;
+
+    @media $respond-landscape {
+        margin: 2rem 0;
+    }
+
+}
+
+/* Anchors */
+a,
+a:visited,
+a:link {
+    color: $yellow;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &:hover {
+
+        @media $respond-landscape {
+            color: $orange;
+        }
+
+    }
+
+}
+
+/* Buttons ================================================================== */
+.button,
+.button:focus,
+.button:active,
+.button:link,
+.button:visited {
+
+}
+
+/* Inputs =================================================================== */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Lists ==================================================================== */
+ul {
+    margin: 0 0 0 2rem;
+    padding: 0;
+
+    li {
+        font-size: 1rem;
+    }
+
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+
+    dt {
+        display: none;
+    }
+
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+/* Tables =================================================================== */
