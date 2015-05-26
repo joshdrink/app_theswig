@@ -23,7 +23,7 @@ nav {
 }
 
 /* Common Pane Styles ======================================================= */
-[class*='pane'] {
+[class*='glass'] {
     background: red;
     display: block;
     height: 100vh;
@@ -42,7 +42,7 @@ nav {
 }
 
 /* Pane 01 ================================================================== */
-.pane-01 {
+.glass-01 {
     background: rgb(242,169,0);
     background: -moz-linear-gradient(top,  rgba(242,169,0,1) 0%, rgba(233,136,0,1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,169,0,1)), color-stop(100%,rgba(233,136,0,1)));
@@ -72,7 +72,7 @@ nav {
 }
 
 /* Pane 02 ================================================================== */
-.pane-02 {
+.glass-02 {
     background: #282828;
     opacity: .5;
     transform: translate(0, 10vh);
@@ -93,7 +93,7 @@ nav {
 }
 
 /* Pane 03 ================================================================== */
-.pane-03 {
+.glass-03 {
     background: #282828;
     opacity: .5;
     transform: translate(0, 11vh);
@@ -123,6 +123,7 @@ nav {
     transform: translate(0, -50%);
 
     @media $respond-landscape {
+        height: 100%;
         padding: 1rem 0 0 0;
         top: 0;
         left: 50%;
@@ -136,6 +137,25 @@ nav {
         @media $respond-landscape {
             display: block;
             margin: 1rem 0;
+        }
+
+        &.icon {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 1rem;
+            width: 100%;
+
+            @media $respond-landscape {
+                display: block;
+            }
+
+            a,
+            img {
+                display: block;
+                width: 100%;
+            }
+
         }
 
         a {
@@ -176,22 +196,22 @@ nav {
     top: 0;
     left: 0;
     transform: translate(0, 11vh);
-    transition: transform 0s ease .2s, opacity .2s ease;
+    transition: opacity .2s ease;
 
     @media $respond-landscape {
         height: auto;
         transform: translate(-89vw, 0);
-        width: 50vw;
+        width: 89vw;
     }
 
     &.active {
         opacity: 1;
         transform: translate(0, -89vh);
-        transition: transform .3s ease .3s, opacity .5s ease .5s;
+        transition: opacity .5s ease .5s;
 
         @media $respond-landscape {
-            transform: translate(30vw, 0);
-            transition: transform .5s ease .3s, opacity .7s ease .6s;
+            transform: translate(11vw, 0);
+            transition: opacity .7s ease .6s;
         }
 
     }

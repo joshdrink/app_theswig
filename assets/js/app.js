@@ -19,17 +19,17 @@ $('[data-link-handler]').on('click touchend',function(e){
 
 // Navigation Handler ==========================================================
 $('.menu dd a').on('click touchend', function(e) {
-    if($('.pane-01').hasClass('active')) {
+    if($('.glass-01').hasClass('active')) {
         if($(this).hasClass('active')) {
             $(this).removeClass('active');
-            $('body').removeClass('active');
+            // $('body').removeClass('active');
             $('.menu-content').removeClass('active');
-            $('.pane-01, .pane-02, .pane-03').removeClass('active');
+            $('.glass-01, .glass-02, .glass-03').removeClass('active');
         }
         else {
             $('.menu dd a').removeClass('active');
             $('.menu-content').removeClass('active');
-            $('body').addClass('active');
+            // $('body').addClass('active');
             $('[data-link-target="'+$(this).attr('data-link-handler')+'"]').addClass('active');
             $(this).addClass('active');
         }
@@ -37,8 +37,8 @@ $('.menu dd a').on('click touchend', function(e) {
     else {
         $(this).addClass('active');
         $('[data-link-target="'+$(this).attr('data-link-handler')+'"]').addClass('active');
-        $('body').addClass('active');
-        $('.pane-01, .pane-02, .pane-03').addClass('active');
+        // $('body').addClass('active');
+        $('.glass-01, .glass-02, .glass-03').addClass('active');
     }
     e.preventDefault();
 });

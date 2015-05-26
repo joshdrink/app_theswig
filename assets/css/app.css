@@ -220,7 +220,7 @@ nav {
 nav {height: 100vh;width: 11vw;}}
 
 /* Common Pane Styles ======================================================= */
-[class*='pane'] {
+[class*='glass'] {
     background: red;
     display: block;
     height: 100vh;
@@ -234,10 +234,10 @@ nav {height: 100vh;width: 11vw;}}
 
 }
 @media screen and (min-width: 801px) {
-[class*='pane'] {height: 100vh;max-width: none;}}
+[class*='glass'] {height: 100vh;max-width: none;}}
 
 /* Pane 01 ================================================================== */
-.pane-01 {
+.glass-01 {
     background: rgb(242,169,0);
     background: linear-gradient(to bottom,  rgba(242,169,0,1) 0%,rgba(233,136,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2a900', endColorstr='#e98800',GradientType=0 );
@@ -249,13 +249,13 @@ nav {height: 100vh;width: 11vw;}}
 
 }
 @media screen and (min-width: 801px) {
-.pane-01 {-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);transition: -webkit-transform .6s cubic-bezier(0.28, 0.18, 0, 1);transition: transform .6s cubic-bezier(0.28, 0.18, 0, 1);}}
-.pane-01.active {-webkit-transform: translate(0, -89vh);-ms-transform: translate(0, -89vh);transform: translate(0, -89vh);transition: -webkit-transform .5s cubic-bezier(0.28, 0.18, 0, 1);transition: transform .5s cubic-bezier(0.28, 0.18, 0, 1)}
+.glass-01 {-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);transition: -webkit-transform .6s cubic-bezier(0.28, 0.18, 0, 1);transition: transform .6s cubic-bezier(0.28, 0.18, 0, 1);}}
+.glass-01.active {-webkit-transform: translate(0, -89vh);-ms-transform: translate(0, -89vh);transform: translate(0, -89vh);transition: -webkit-transform .5s cubic-bezier(0.28, 0.18, 0, 1);transition: transform .5s cubic-bezier(0.28, 0.18, 0, 1)}
 @media screen and (min-width: 801px) {
-.pane-01.active {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}}
+.glass-01.active {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}}
 
 /* Pane 02 ================================================================== */
-.pane-02 {
+.glass-02 {
     background: #282828;
     opacity: .5;
     -webkit-transform: translate(0, 10vh);
@@ -264,13 +264,13 @@ nav {height: 100vh;width: 11vw;}}
 
 }
 @media screen and (min-width: 801px) {
-.pane-02 {-webkit-transform: translate(-99vw, 0);-ms-transform: translate(-99vw, 0);transform: translate(-99vw, 0);}}
-.pane-02.active {-webkit-transform: translate(0, 0vh);-ms-transform: translate(0, 0vh);transform: translate(0, 0vh)}
+.glass-02 {-webkit-transform: translate(-99vw, 0);-ms-transform: translate(-99vw, 0);transform: translate(-99vw, 0);}}
+.glass-02.active {-webkit-transform: translate(0, 0vh);-ms-transform: translate(0, 0vh);transform: translate(0, 0vh)}
 @media screen and (min-width: 801px) {
-.pane-02.active {-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);}}
+.glass-02.active {-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);}}
 
 /* Pane 03 ================================================================== */
-.pane-03 {
+.glass-03 {
     background: #282828;
     opacity: .5;
     -webkit-transform: translate(0, 11vh);
@@ -279,10 +279,10 @@ nav {height: 100vh;width: 11vw;}}
 
 }
 @media screen and (min-width: 801px) {
-.pane-03 {-webkit-transform: translate(-100vw, 0);-ms-transform: translate(-100vw, 0);transform: translate(-100vw, 0);}}
-.pane-03.active {-webkit-transform: translate(0, 10vh);-ms-transform: translate(0, 10vh);transform: translate(0, 10vh);transition: -webkit-transform .3s ease .2s;transition: transform .3s ease .2s}
+.glass-03 {-webkit-transform: translate(-100vw, 0);-ms-transform: translate(-100vw, 0);transform: translate(-100vw, 0);}}
+.glass-03.active {-webkit-transform: translate(0, 10vh);-ms-transform: translate(0, 10vh);transform: translate(0, 10vh);transition: -webkit-transform .3s ease .2s;transition: transform .3s ease .2s}
 @media screen and (min-width: 801px) {
-.pane-03.active {-webkit-transform: translate(-99vw, 0);-ms-transform: translate(-99vw, 0);transform: translate(-99vw, 0);}}
+.glass-03.active {-webkit-transform: translate(-99vw, 0);-ms-transform: translate(-99vw, 0);transform: translate(-99vw, 0);}}
 
 /* Menu ===================================================================== */
 .menu {
@@ -296,10 +296,14 @@ nav {height: 100vh;width: 11vw;}}
 
 }
 @media screen and (min-width: 801px) {
-.menu {padding: 1rem 0 0 0;top: 0;left: 50%;-webkit-transform: translate(-40%, 0);-ms-transform: translate(-40%, 0);transform: translate(-40%, 0);}}
+.menu {height: 100%;padding: 1rem 0 0 0;top: 0;left: 50%;-webkit-transform: translate(-40%, 0);-ms-transform: translate(-40%, 0);transform: translate(-40%, 0);}}
 .menu dd {display: inline-block;margin: 0 1rem 0 0}
 @media screen and (min-width: 801px) {
 .menu dd {display: block;margin: 1rem 0;}}
+.menu dd.icon {display: none;position: absolute;left: 0;bottom: 1rem;width: 100%}
+@media screen and (min-width: 801px) {
+.menu dd.icon {display: block;}}
+.menu dd.icon a, .menu dd.icon img {display: block;width: 100%;}
 .menu dd a {color: rgba(40, 40, 40, 1);font-family: 'Roboto Condensed', sans-serif;font-weight: 700;text-transform: uppercase}
 .menu dd a.active {color: rgba(250, 250, 250, 1);}
 @media screen and (min-width: 801px) {
@@ -318,15 +322,14 @@ nav {height: 100vh;width: 11vw;}}
     -webkit-transform: translate(0, 11vh);
         -ms-transform: translate(0, 11vh);
             transform: translate(0, 11vh);
-    transition: -webkit-transform 0s ease .2s, opacity .2s ease;
-    transition: transform 0s ease .2s, opacity .2s ease
+    transition: opacity .2s ease
 
 }
 @media screen and (min-width: 801px) {
-.menu-content {height: auto;-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);width: 50vw;}}
-.menu-content.active {opacity: 1;-webkit-transform: translate(0, -89vh);-ms-transform: translate(0, -89vh);transform: translate(0, -89vh);transition: -webkit-transform .3s ease .3s, opacity .5s ease .5s;transition: transform .3s ease .3s, opacity .5s ease .5s}
+.menu-content {height: auto;-webkit-transform: translate(-89vw, 0);-ms-transform: translate(-89vw, 0);transform: translate(-89vw, 0);width: 89vw;}}
+.menu-content.active {opacity: 1;-webkit-transform: translate(0, -89vh);-ms-transform: translate(0, -89vh);transform: translate(0, -89vh);transition: opacity .5s ease .5s}
 @media screen and (min-width: 801px) {
-.menu-content.active {-webkit-transform: translate(30vw, 0);-ms-transform: translate(30vw, 0);transform: translate(30vw, 0);transition: -webkit-transform .5s ease .3s, opacity .7s ease .6s;transition: transform .5s ease .3s, opacity .7s ease .6s;}}
+.menu-content.active {-webkit-transform: translate(11vw, 0);-ms-transform: translate(11vw, 0);transform: translate(11vw, 0);transition: opacity .7s ease .6s;}}
 
 .heading-menu {
     font-size: 5rem;
